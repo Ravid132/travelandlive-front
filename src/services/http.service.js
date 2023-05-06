@@ -2,9 +2,8 @@ import Axios from 'axios';
 
 const BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? // ? '/api/'
-      'https://travel-and-live-backend.onrender.com/api/'
-    : '//localhost:3030/api/';
+    ? 'https://travel-and-live-backend.onrender.com/api/'
+    : 'https://travel-and-live-backend.onrender.com/api/';
 
 var axios = Axios.create({
   withCredentials: true,

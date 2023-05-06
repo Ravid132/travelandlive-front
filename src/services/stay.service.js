@@ -33,11 +33,10 @@ export const stayService = {
 window.cs = stayService;
 //LIST
 async function query(filterBy = {}) {
-  
   // return axios
   //   .get('http://localhost:3030/api/stay', { params: filterBy })
   //   .then((res) => res.data);
-  return httpService.get('stay', filterBy)
+  return httpService.get('stay', filterBy);
 }
 
 async function getUserStays(user) {
@@ -49,14 +48,11 @@ function getById(stayId) {
   // return axios
   //   .get(`http://localhost:3030/api/stay/${stayId}`)
   //   .then((res) => res.data);
-  return httpService.get(`stay/${stayId}`)
-
-
+  return httpService.get(`stay/${stayId}`);
 }
 function remove(stayId) {
   // return axios.delete(`http://localhost:3030/api/stay/${stayId}`);
   return httpService.delete(`stay/${stayId}`);
-  
 }
 async function save(stay) {
   if (stay._id) {
